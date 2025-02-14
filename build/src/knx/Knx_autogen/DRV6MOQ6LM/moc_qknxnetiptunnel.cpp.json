@@ -1,0 +1,68 @@
+{
+    "classes": [
+        {
+            "className": "QKnxNetIpTunnel",
+            "lineNumber": 41,
+            "object": true,
+            "qualifiedClassName": "QKnxNetIpTunnel",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "frame",
+                            "type": "QKnxLinkLayerFrame"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "frameReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "feature",
+                            "type": "QKnx::InterfaceFeature"
+                        },
+                        {
+                            "name": "value",
+                            "type": "QKnxByteArray"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "tunnelingFeatureInfoReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "feature",
+                            "type": "QKnx::InterfaceFeature"
+                        },
+                        {
+                            "name": "code",
+                            "type": "QKnx::ReturnCode"
+                        },
+                        {
+                            "name": "value",
+                            "type": "QKnxByteArray"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "tunnelingFeatureResponseReceived",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxNetIpEndpointConnection"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknxnetiptunnel.h",
+    "outputRevision": 68
+}

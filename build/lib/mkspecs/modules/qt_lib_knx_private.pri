@@ -1,0 +1,11 @@
+QT.knx_private.VERSION = 6.8.2
+QT.knx_private.name = QtKnx
+QT.knx_private.module =
+QT.knx_private.libs = $$QT_MODULE_LIB_BASE
+QT.knx_private.includes = $$QT_MODULE_INCLUDE_BASE/QtKnx/6.8.2 $$QT_MODULE_INCLUDE_BASE/QtKnx/6.8.2/QtKnx
+QT.knx_private.frameworks = 
+QT.knx_private.depends = core_private network_private knx
+QT.knx_private.uses = 
+QT.knx_private.module_config = v2 internal_module
+QT.knx_private.enabled_features = 
+QT.knx_private.disabled_features = 

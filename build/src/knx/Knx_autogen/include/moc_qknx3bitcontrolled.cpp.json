@@ -1,0 +1,83 @@
+{
+    "classes": [
+        {
+            "className": "QKnx3BitControlled",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "NumberOfIntervals",
+                    "type": "quint8",
+                    "values": [
+                        "Break",
+                        "One",
+                        "Two",
+                        "Four",
+                        "Eight",
+                        "Sixteen",
+                        "ThirtyTwo"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 38,
+            "qualifiedClassName": "QKnx3BitControlled",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxFixedSizeDatapointType"
+                }
+            ]
+        },
+        {
+            "className": "QKnxControlDimming",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "Decrease",
+                        "Increase"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 73,
+            "qualifiedClassName": "QKnxControlDimming",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx3BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxControlBlinds",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "Up",
+                        "Down"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 94,
+            "qualifiedClassName": "QKnxControlBlinds",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx3BitControlled"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknx3bitcontrolled.h",
+    "outputRevision": 68
+}

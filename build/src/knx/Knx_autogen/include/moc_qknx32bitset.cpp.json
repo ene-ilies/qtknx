@@ -1,0 +1,64 @@
+{
+    "classes": [
+        {
+            "className": "QKnxCombinedInfoOnOff",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Output",
+                    "type": "quint8",
+                    "values": [
+                        "First",
+                        "Second",
+                        "Third",
+                        "Fourth",
+                        "Fifth",
+                        "Sixth",
+                        "Seventh",
+                        "Eighth",
+                        "Ninth",
+                        "Tenth",
+                        "Eleventh",
+                        "Twelfth",
+                        "Thirteenth",
+                        "Fourteenth",
+                        "Fifteenth",
+                        "Sixteenth"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "OutputState",
+                    "type": "quint8",
+                    "values": [
+                        "Off",
+                        "On"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "OutputValidity",
+                    "type": "quint8",
+                    "values": [
+                        "Invalid",
+                        "Valid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 54,
+            "qualifiedClassName": "QKnxCombinedInfoOnOff",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx32BitSet"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknx32bitset.h",
+    "outputRevision": 68
+}

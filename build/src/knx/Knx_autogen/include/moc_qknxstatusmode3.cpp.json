@@ -1,0 +1,43 @@
+{
+    "classes": [
+        {
+            "className": "QKnxStatusMode3",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "values": [
+                        "Zero",
+                        "One",
+                        "Two",
+                        "Unknown"
+                    ]
+                },
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Status",
+                    "values": [
+                        "A",
+                        "B",
+                        "C",
+                        "D",
+                        "E"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 38,
+            "qualifiedClassName": "QKnxStatusMode3",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxFixedSizeDatapointType"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknxstatusmode3.h",
+    "outputRevision": 68
+}

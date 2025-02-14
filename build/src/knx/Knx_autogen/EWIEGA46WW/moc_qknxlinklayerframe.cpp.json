@@ -1,0 +1,37 @@
+{
+    "classes": [
+        {
+            "className": "QKnxLinkLayerFrame",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "MessageCode",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "BusmonitorIndication",
+                        "DataRequest",
+                        "DataConfirmation",
+                        "DataIndication",
+                        "RawRequest",
+                        "RawIndication",
+                        "RawConfirmation",
+                        "PollDataRequest",
+                        "PollDataConfirmation",
+                        "DataConnectedRequest",
+                        "DataConnectedIndication",
+                        "DataIndividualRequest",
+                        "DataIndividualIndication",
+                        "ResetRequest"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 45,
+            "qualifiedClassName": "QKnxLinkLayerFrame"
+        }
+    ],
+    "inputFile": "qknxlinklayerframe.h",
+    "outputRevision": 68
+}

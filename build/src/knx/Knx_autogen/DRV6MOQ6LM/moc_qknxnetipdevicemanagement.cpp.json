@@ -1,0 +1,32 @@
+{
+    "classes": [
+        {
+            "className": "QKnxNetIpDeviceManagement",
+            "lineNumber": 40,
+            "object": true,
+            "qualifiedClassName": "QKnxNetIpDeviceManagement",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "frame",
+                            "type": "QKnxDeviceManagementFrame"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "frameReceived",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxNetIpEndpointConnection"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknxnetipdevicemanagement.h",
+    "outputRevision": 68
+}

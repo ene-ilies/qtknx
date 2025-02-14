@@ -1,0 +1,54 @@
+{
+    "classes": [
+        {
+            "className": "QKnxSceneControl",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "Activate",
+                        "Learn"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 54,
+            "qualifiedClassName": "QKnxSceneControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxFixedSizeDatapointType"
+                }
+            ]
+        },
+        {
+            "className": "QKnxSceneInfo",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Info",
+                    "type": "quint8",
+                    "values": [
+                        "Active",
+                        "Inactive"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 83,
+            "qualifiedClassName": "QKnxSceneInfo",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxFixedSizeDatapointType"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknxscene.h",
+    "outputRevision": 68
+}

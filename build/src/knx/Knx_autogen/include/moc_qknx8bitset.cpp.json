@@ -1,0 +1,59 @@
+{
+    "classes": [
+        {
+            "className": "QKnxGeneralStatus",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Attribute",
+                    "type": "quint8",
+                    "values": [
+                        "OutOfService",
+                        "Fault",
+                        "Overridden",
+                        "InAlarm",
+                        "AlarmUnacknowledged"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 59,
+            "qualifiedClassName": "QKnxGeneralStatus",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx8BitSet"
+                }
+            ]
+        },
+        {
+            "className": "QKnxDeviceControl",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Attribute",
+                    "type": "quint8",
+                    "values": [
+                        "UserStopped",
+                        "OwnIA",
+                        "VerifyMode",
+                        "SafeState"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 89,
+            "qualifiedClassName": "QKnxDeviceControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx8BitSet"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknx8bitset.h",
+    "outputRevision": 68
+}

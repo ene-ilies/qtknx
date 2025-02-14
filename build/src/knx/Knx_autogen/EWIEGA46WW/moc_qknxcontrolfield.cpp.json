@@ -1,0 +1,76 @@
+{
+    "classes": [
+        {
+            "className": "QKnxControlField",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "FrameFormat",
+                    "type": "quint8",
+                    "values": [
+                        "Extended",
+                        "Standard"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Repeat",
+                    "type": "quint8",
+                    "values": [
+                        "Repeat",
+                        "DoNotRepeat"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Broadcast",
+                    "type": "quint8",
+                    "values": [
+                        "System",
+                        "Domain"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Priority",
+                    "type": "quint8",
+                    "values": [
+                        "System",
+                        "Normal",
+                        "Urgent",
+                        "Low"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Acknowledge",
+                    "type": "quint8",
+                    "values": [
+                        "NotRequested",
+                        "Requested"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Confirm",
+                    "type": "quint8",
+                    "values": [
+                        "NoError",
+                        "Error"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 41,
+            "qualifiedClassName": "QKnxControlField"
+        }
+    ],
+    "inputFile": "qknxcontrolfield.h",
+    "outputRevision": 68
+}

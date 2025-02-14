@@ -1,0 +1,31 @@
+{
+    "classes": [
+        {
+            "className": "QKnxEntranceAccess",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Attribute",
+                    "values": [
+                        "Error",
+                        "PermissionAccepted",
+                        "ReadRightToLeft",
+                        "Encrypted"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 38,
+            "qualifiedClassName": "QKnxEntranceAccess",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnxFixedSizeDatapointType"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknxentranceaccess.h",
+    "outputRevision": 68
+}

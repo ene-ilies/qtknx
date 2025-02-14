@@ -1,0 +1,298 @@
+{
+    "classes": [
+        {
+            "className": "NetIp",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "HostProtocol",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "UDP_IPv4",
+                        "TCP_IPv4"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "ConnectionType",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "DeviceManagement",
+                        "Tunnel",
+                        "RemoteLogging",
+                        "RemoteConfiguration",
+                        "ObjectServer"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "DescriptionType",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "DeviceInfo",
+                        "SupportedServiceFamilies",
+                        "IpConfiguration",
+                        "CurrentIpConfiguration",
+                        "KnxAddresses",
+                        "SecuredServices",
+                        "TunnelingInfo",
+                        "ExtendedDeviceInfo",
+                        "ManufacturerData",
+                        "NotUsed"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "ServiceFamily",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "Core",
+                        "DeviceManagement",
+                        "IpTunneling",
+                        "IpRouting",
+                        "RemoteLogging",
+                        "RemoteConfigAndDiagnosis",
+                        "ObjectServer",
+                        "Security"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "ServiceType",
+                    "type": "quint16",
+                    "values": [
+                        "Unknown",
+                        "SearchRequest",
+                        "SearchResponse",
+                        "DescriptionRequest",
+                        "DescriptionResponse",
+                        "ConnectRequest",
+                        "ConnectResponse",
+                        "ConnectionStateRequest",
+                        "ConnectionStateResponse",
+                        "DisconnectRequest",
+                        "DisconnectResponse",
+                        "ExtendedSearchRequest",
+                        "ExtendedSearchResponse",
+                        "DeviceConfigurationRequest",
+                        "DeviceConfigurationAcknowledge",
+                        "TunnelingRequest",
+                        "TunnelingAcknowledge",
+                        "TunnelingFeatureGet",
+                        "TunnelingFeatureResponse",
+                        "TunnelingFeatureSet",
+                        "TunnelingFeatureInfo",
+                        "RoutingIndication",
+                        "RoutingLostMessage",
+                        "RoutingBusy",
+                        "RoutingSystemBroadcast",
+                        "SecureWrapper",
+                        "SessionRequest",
+                        "SessionResponse",
+                        "SessionAuthenticate",
+                        "SessionStatus",
+                        "TimerNotify"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Error",
+                    "type": "quint8",
+                    "values": [
+                        "None",
+                        "HostProtocolType",
+                        "VersionNotSupported",
+                        "SequenceNumber",
+                        "Error",
+                        "ConnectionId",
+                        "ConnectionType",
+                        "ConnectionOption",
+                        "NoMoreConnections",
+                        "NoMoreUniqueConnections",
+                        "DataConnection",
+                        "KnxConnection",
+                        "Authorization",
+                        "TunnelingLayer",
+                        "NoTunnelingAddress",
+                        "ConnectionInUse"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "DeviceState",
+                    "type": "quint8",
+                    "values": [
+                        "KnxFault",
+                        "IpFault"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "TunnelLayer",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "Link",
+                        "Raw",
+                        "Busmonitor"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "ProgrammingMode",
+                    "type": "quint8",
+                    "values": [
+                        "Inactive",
+                        "Active",
+                        "Unknown"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "AssignmentMethod",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "Manual",
+                        "BootP",
+                        "Dhcp",
+                        "AutoIp"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Capability",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "BootP",
+                        "Dhcp",
+                        "AutoIp"
+                    ]
+                },
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "Timeout",
+                    "values": [
+                        "HeartbeatTimeout",
+                        "ConnectionAliveTimeout",
+                        "SearchTimeout",
+                        "DescriptionTimeout",
+                        "ConnectRequestTimeout",
+                        "ConnectionStateRequestTimeout",
+                        "DisconnectRequestTimeout",
+                        "DeviceConfigurationRequestTimeout",
+                        "TunnelingRequestTimeout",
+                        "RoutingBusyWaitTime",
+                        "SecureSessionTimeout",
+                        "SecureSessionRequestTimeout",
+                        "SecureSessionAuthenticateTimeout"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "SearchParameterType",
+                    "type": "quint8",
+                    "values": [
+                        "Unknown",
+                        "Invalid",
+                        "SelectByProgrammingMode",
+                        "SelectByMACAddress",
+                        "SelectByService",
+                        "SelectByServiceSRP",
+                        "RequestDIBs",
+                        "Reserved01",
+                        "Reserved02",
+                        "Reserved03"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "SecureSessionStatus",
+                    "type": "quint8",
+                    "values": [
+                        "AuthenticationSuccess",
+                        "AuthenticationFailed",
+                        "Unauthenticated",
+                        "Timeout",
+                        "KeepAlive",
+                        "Close",
+                        "Unknown"
+                    ]
+                },
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "SecureUserId",
+                    "type": "quint8",
+                    "values": [
+                        "Reserved",
+                        "Management",
+                        "UserRole",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "lineNumber": 40,
+            "namespace": true,
+            "qualifiedClassName": "QKnx::NetIp"
+        },
+        {
+            "className": "CemiServer",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "ReturnCode",
+                    "type": "quint8",
+                    "values": [
+                        "NoError"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Error",
+                    "type": "quint8",
+                    "values": [
+                        "Unspecified",
+                        "OutOfRange",
+                        "OutOfMaxRange",
+                        "OutOfMinRange",
+                        "Memory",
+                        "ReadOnly",
+                        "IllegalCommand",
+                        "NonExistingProperty",
+                        "TypeConflict",
+                        "PropertyIndexRangeError",
+                        "TemporaryNotWritable",
+                        "None"
+                    ]
+                }
+            ],
+            "lineNumber": 250,
+            "namespace": true,
+            "qualifiedClassName": "QKnx::NetIp::CemiServer"
+        }
+    ],
+    "inputFile": "qknxnetip.h",
+    "outputRevision": 68
+}

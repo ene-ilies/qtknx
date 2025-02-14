@@ -1,0 +1,414 @@
+{
+    "classes": [
+        {
+            "className": "QKnxSwitchControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Off",
+                        "On"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 93,
+            "qualifiedClassName": "QKnxSwitchControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxBoolControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "False",
+                        "True"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 94,
+            "qualifiedClassName": "QKnxBoolControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxEnableControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Disable",
+                        "Enable"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 95,
+            "qualifiedClassName": "QKnxEnableControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxRampControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "NoRamp",
+                        "Ramp"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 96,
+            "qualifiedClassName": "QKnxRampControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxAlarmControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "NoAlarm",
+                        "Alarm"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 97,
+            "qualifiedClassName": "QKnxAlarmControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxBinaryValueControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Low",
+                        "High"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 98,
+            "qualifiedClassName": "QKnxBinaryValueControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxStepControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Decrease",
+                        "Increase"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 99,
+            "qualifiedClassName": "QKnxStepControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxDirection1Control",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Up",
+                        "Down"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 100,
+            "qualifiedClassName": "QKnxDirection1Control",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxDirection2Control",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Open",
+                        "Close"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 101,
+            "qualifiedClassName": "QKnxDirection2Control",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxStartControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Stop",
+                        "Start"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 102,
+            "qualifiedClassName": "QKnxStartControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxStateControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "Inactive",
+                        "Active"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 103,
+            "qualifiedClassName": "QKnxStateControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        },
+        {
+            "className": "QKnxInvertControl",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "State",
+                    "type": "quint8",
+                    "values": [
+                        "NotInverted",
+                        "Inverted"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Control",
+                    "type": "quint8",
+                    "values": [
+                        "NoControl",
+                        "Control"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 104,
+            "qualifiedClassName": "QKnxInvertControl",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1BitControlled"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknx1bitcontrolled.h",
+    "outputRevision": 68
+}

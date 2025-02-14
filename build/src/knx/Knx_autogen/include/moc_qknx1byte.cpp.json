@@ -1,0 +1,464 @@
+{
+    "classes": [
+        {
+            "className": "QKnxScloMode",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "type": "quint8",
+                    "values": [
+                        "Autonomous",
+                        "Slave",
+                        "Master",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 57,
+            "qualifiedClassName": "QKnxScloMode",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxBuildingMode",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "type": "quint8",
+                    "values": [
+                        "BuildingInUse",
+                        "BuildingNotUsed",
+                        "BuildingProtection",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 80,
+            "qualifiedClassName": "QKnxBuildingMode",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxOccupyMode",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "type": "quint8",
+                    "values": [
+                        "Occupied",
+                        "Standby",
+                        "NotOccupied",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 103,
+            "qualifiedClassName": "QKnxOccupyMode",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxPriority",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Priority",
+                    "type": "quint8",
+                    "values": [
+                        "High",
+                        "Medium",
+                        "Low",
+                        "Void",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 126,
+            "qualifiedClassName": "QKnxPriority",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxLightApplicationMode",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "type": "quint8",
+                    "values": [
+                        "Normal",
+                        "PresenceSimulation",
+                        "NightRound",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 150,
+            "qualifiedClassName": "QKnxLightApplicationMode",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxApplicationArea",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Area",
+                    "type": "quint8",
+                    "values": [
+                        "NoFault",
+                        "SystemFunctionCommonInterest",
+                        "HvacGeneralFBs",
+                        "HvacHotWaterHeating",
+                        "HvacDirectElectricalHeating",
+                        "HvacTerminalUnits",
+                        "HvacVac",
+                        "Lighting",
+                        "Security",
+                        "LoadManagement",
+                        "ShuttersAndBlinds",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 173,
+            "qualifiedClassName": "QKnxApplicationArea",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxAlarmClassType",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Type",
+                    "type": "quint8",
+                    "values": [
+                        "SimpleAlarm",
+                        "BasicAlarm",
+                        "ExtendedAlarm",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 206,
+            "qualifiedClassName": "QKnxAlarmClassType",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxPsuMode",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "type": "quint8",
+                    "values": [
+                        "Disabled",
+                        "Enabled",
+                        "Automatic",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 229,
+            "qualifiedClassName": "QKnxPsuMode",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxErrorClassSystem",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Error",
+                    "type": "quint8",
+                    "values": [
+                        "NoFault",
+                        "GeneralDeviceFault",
+                        "CommunicationFault",
+                        "ConfigurationFault",
+                        "HardwareFault",
+                        "SoftwareFault",
+                        "InsufficientNonVolatileMemory",
+                        "InsufficientVolatileMemory",
+                        "MemoryAllocationCommandWithSize0Received",
+                        "CrcError",
+                        "WatchdogResetDetected",
+                        "InvalidOpCodeDetected",
+                        "GeneralProtectionFault",
+                        "MaximalTableLengthExceeded",
+                        "UndefinedLoadCommandReceived",
+                        "GroupAddressTableIsNotSorted",
+                        "InvalidConnectionNumberTsap",
+                        "InvalidGroupObjectNumberAsap",
+                        "GroupObjectTypeExceeds",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 252,
+            "qualifiedClassName": "QKnxErrorClassSystem",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxErrorClassHvac",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Error",
+                    "type": "quint8",
+                    "values": [
+                        "NoFault",
+                        "SensorFault",
+                        "ProcessControllerFault",
+                        "ActuatorFault",
+                        "OtherFault",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 291,
+            "qualifiedClassName": "QKnxErrorClassHvac",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxTimeDelay",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Delay",
+                    "type": "quint8",
+                    "values": [
+                        "NotActive",
+                        "OneSecond",
+                        "TwoSecond",
+                        "ThreeSecond",
+                        "FiveSecond",
+                        "TenSecond",
+                        "FifteenSecond",
+                        "TwentySecond",
+                        "ThirtySecond",
+                        "FortyFiveSecond",
+                        "OneMinute",
+                        "OneMinuteOneQuarter",
+                        "OneMinuteAndHaft",
+                        "TwoMinute",
+                        "TwoMinuteAndHalf",
+                        "ThreeMinute",
+                        "FiveMinute",
+                        "FifteenMinute",
+                        "TwentyMinute",
+                        "ThirtyMinute",
+                        "OneHour",
+                        "TwoHour",
+                        "ThreeHour",
+                        "FiveHour",
+                        "TwelveHour",
+                        "TwentyFourHour",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 316,
+            "qualifiedClassName": "QKnxTimeDelay",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxBeaufortWindForceScale",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Force",
+                    "type": "quint8",
+                    "values": [
+                        "CalmNoWind",
+                        "LightAir",
+                        "LightBreeze",
+                        "GentleBreeze",
+                        "ModerateBreeze",
+                        "FreshBreeze",
+                        "StrongBreeze",
+                        "NearModerateGale",
+                        "FreshGale",
+                        "StrongGale",
+                        "WholeGaleStorm",
+                        "ViolentStorm",
+                        "Hurricane",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 362,
+            "qualifiedClassName": "QKnxBeaufortWindForceScale",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxSensorSelect",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Mode",
+                    "type": "quint8",
+                    "values": [
+                        "Inactive",
+                        "DigitalInputNotInverted",
+                        "DigitalInputInverted",
+                        "AnalogInput",
+                        "TemperatureSensorInput",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 395,
+            "qualifiedClassName": "QKnxSensorSelect",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxActuatorConnectType",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Type",
+                    "type": "quint8",
+                    "values": [
+                        "SensorConnection",
+                        "ControllerConnection",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 420,
+            "qualifiedClassName": "QKnxActuatorConnectType",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        },
+        {
+            "className": "QKnxCloudCover",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Scale",
+                    "type": "quint8",
+                    "values": [
+                        "Cloudless",
+                        "Sunny",
+                        "Sunshiny",
+                        "LightlyCloudy",
+                        "ScatteredClouds",
+                        "Cloudy",
+                        "VeryCloudy",
+                        "AlmostOvercast",
+                        "Overcast",
+                        "ObstructedFromView",
+                        "Invalid"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 442,
+            "qualifiedClassName": "QKnxCloudCover",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QKnx1Byte"
+                }
+            ]
+        }
+    ],
+    "inputFile": "qknx1byte.h",
+    "outputRevision": 68
+}

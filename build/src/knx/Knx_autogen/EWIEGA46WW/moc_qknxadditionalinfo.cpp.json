@@ -1,0 +1,35 @@
+{
+    "classes": [
+        {
+            "className": "QKnxAdditionalInfo",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Type",
+                    "type": "quint8",
+                    "values": [
+                        "Reserved",
+                        "PlMediumInformation",
+                        "RfMediumInformation",
+                        "BusmonitorStatusInfo",
+                        "TimestampRelative",
+                        "TimeDelayUntilSending",
+                        "ExtendedRelativeTimestamp",
+                        "BiBatInformation",
+                        "RfMultiInformation",
+                        "PreambleAndPostamble",
+                        "RfFastAckInformation",
+                        "ManufacturerSpecificData",
+                        "EscCode"
+                    ]
+                }
+            ],
+            "gadget": true,
+            "lineNumber": 40,
+            "qualifiedClassName": "QKnxAdditionalInfo"
+        }
+    ],
+    "inputFile": "qknxadditionalinfo.h",
+    "outputRevision": 68
+}
