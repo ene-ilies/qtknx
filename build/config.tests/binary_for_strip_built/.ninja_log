@@ -1,5 +1,0 @@
-# ninja log v5
-1	21	1739394827015415526	CMakeFiles/lib1.dir/lib1.cpp.o	7efbeeb45f154282
-21	50	1739394827043415860	liblib1.so	530b2b95f45d3f61
-50	55	0	CMakeFiles/print_lib_path	78e902f7d1792fb5
-50	55	0	/home/bogdan-dev/development/projects/qtknx/build/config.tests/binary_for_strip_built/CMakeFiles/print_lib_path	78e902f7d1792fb5

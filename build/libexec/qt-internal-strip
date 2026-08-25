@@ -1,4 +1,0 @@
-#!/bin/sh
-# echo the invoked command
-set -x
-/home/bogdan-dev/sdks/nymea-qemu-rootfs/sysroots/x86_64-pokysdk-linux/usr/bin/x86_64-poky-linux/x86_64-poky-linux-strip --keep-section=.gnu_debuglink "$@"

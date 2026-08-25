@@ -5,11 +5,13 @@ elseif(NOT TARGET WrapZLIB::WrapZLIB)
     qt_find_package(WrapZLIB PROVIDED_TARGETS WrapZLIB::WrapZLIB)
 endif()
 
-#set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Network)
 find_package(OpenSSL REQUIRED)
+
+message(STATUS "openssl: ${OPENSSL_CRYPTO_LIBRARY}")
+message(STATUS "OpenSSL version: ${OPENSSL_VERSION}")
+message(STATUS "OpenSSL libs: ${OPENSSL_LIBRARIES}")
 
 qt_internal_add_module(Knx
     SOURCES
@@ -137,8 +139,6 @@ qt_internal_add_module(Knx
         ssl/qknxsecurekey.cpp ssl/qknxsecurekey.h
         ssl/qknxssl_p.h
         ssl/qknxssl_openssl.cpp
-        ssl/qsslsocket_openssl11_symbols_p.h
-        ssl/qsslsocket_openssl_symbols.cpp ssl/qsslsocket_openssl_symbols_p.h
     LIBRARIES
         Qt::CorePrivate
         Qt::NetworkPrivate
@@ -156,26 +156,29 @@ target_include_directories(Knx PRIVATE
     ets
     knxproj
     netip
+    ssl
 )
 
-#target_link_libraries(Knx PRIVATE
-#    Qt::Core
-#    Qt::CorePrivate
-#    Qt::Network
-#    Qt::NetworkPrivate
-#)
+qt_internal_extend_target(Knx CONDITION QT_FEATURE_system_zlib
+    LIBRARIES
+        WrapZLIB::WrapZLIB
+)
 
-if(OPENSSL_FOUND)
-    target_link_libraries(Knx PRIVATE
-        OPENSSL_CRYPTO_LIBRARY
-    )
-endif()
-
-if(NOT QT_FEATURE_system_zlib)
-    target_link_libraries(Knx PRIVATE
+qt_internal_extend_target(Knx CONDITION NOT QT_FEATURE_system_zlib
+    LIBRARIES
         Qt::ZlibPrivate
-    )
-endif()
+)
+
+target_link_libraries(Knx PRIVATE
+   Qt::Core
+   Qt::CorePrivate
+   Qt::Network
+   Qt::NetworkPrivate
+)
+
+target_link_libraries(Knx PRIVATE
+    OpenSSL::Crypto
+)
 
 if(QT_FEATURE_opensslv11)
     target_sources(Knx PUBLIC
@@ -205,17 +208,5 @@ if(QT_FEATURE_opensslv11 AND WIN32)
         crypt32
     )
 endif()
-
-#install(TARGETS QtKnx
-#    BUNDLE DESTINATION .
-#    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-#)
-
-#qt_generate_deploy_app_script(
-#    TARGET QtKnx
-#    OUTPUT_SCRIPT deploy_script
-#    NO_UNSUPPORTED_PLATFORM_ERROR
-#)
-#install(SCRIPT ${deploy_script})
 
 qt_internal_add_docs(QtKnx doc/qtknx.qdocconf)

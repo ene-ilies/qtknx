@@ -1,1 +1,0 @@
-FINAL_PRL_FILE_PATH = /home/bogdan-dev/development/projects/qtknx/build/lib/libQt6Knx.prl

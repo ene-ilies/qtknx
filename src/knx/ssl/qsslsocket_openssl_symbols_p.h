@@ -270,11 +270,9 @@ namespace QKnxPrivate {
 
 #endif // !defined QT_LINKED_OPENSSL
 
-#if QT_CONFIG(opensslv11)
+#if OPENSSL_VERSION_NUMBER >= 0x30000000L
 #include "qsslsocket_openssl11_symbols_p.h"
-#else
-#include "qsslsocket_opensslpre11_symbols_p.h"
-#endif // QT_CONFIG
+#endif // OPENSSL_VERSION 
 
 bool q_resolveOpenSslSymbols();
 long q_ASN1_INTEGER_get(ASN1_INTEGER *a);
@@ -287,9 +285,9 @@ int q_BIO_read(BIO *a, void *b, int c);
 Q_AUTOTEST_EXPORT int q_BIO_write(BIO *a, const void *b, int c);
 int q_BN_num_bits(const BIGNUM *a);
 
-#if QT_CONFIG(opensslv11)
+#if OPENSSL_VERSION_NUMBER < 0x30000000L
 int q_BN_is_word(BIGNUM *a, BN_ULONG w);
-#else // opensslv11
+#else // OPENSSL_VERSION
 // BN_is_word is implemented purely as a
 // macro in OpenSSL < 1.1. It doesn't
 // call any functions.
