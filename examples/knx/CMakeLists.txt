@@ -3,16 +3,16 @@ project(knx VERSION 1.0 LANGUAGES C CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-find_package(QT NAMES Qt5 Qt6 REQUIRED COMPONENTS Core)
-
 qt_standard_project_setup()
+
+find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 
 if(NOT TARGET Qt::Network)
     return()
 endif()
 add_subdirectory(discoverer)
 # add_subdirectory(knxproj)
-# add_subdirectory(tunnelclient)
+add_subdirectory(tunnelclient)
 # add_subdirectory(router)
 # if(TARGET Qt::Widgets)
 #     add_subdirectory(knxeditor)

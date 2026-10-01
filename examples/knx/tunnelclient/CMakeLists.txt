@@ -16,8 +16,6 @@ target_link_libraries(tunnelclient PRIVATE
     Qt::Network
 )
 
-message(STATUS, "QTKNX path: ${QT_KNX_LIB}")
-
 install(TARGETS tunnelclient
     BUNDLE DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

@@ -138,7 +138,9 @@ qt_internal_add_module(Knx
         ssl/qknxkeyring.cpp ssl/qknxkeyring_p.h
         ssl/qknxsecurekey.cpp ssl/qknxsecurekey.h
         ssl/qknxssl_p.h
+        ssl/qopenssl_p.h
         ssl/qknxssl_openssl.cpp
+        ssl/qsslsocket_openssl_symbols.cpp ssl/qsslsocket_openssl_symbols_p.h
     LIBRARIES
         Qt::CorePrivate
         Qt::NetworkPrivate
@@ -180,33 +182,5 @@ target_link_libraries(Knx PRIVATE
     OpenSSL::Crypto
 )
 
-if(QT_FEATURE_opensslv11)
-    target_sources(Knx PUBLIC
-        ssl/qsslsocket_openssl11_symbols_p.h
-        ssl/qsslsocket_openssl_symbols.cpp ssl/qsslsocket_openssl_symbols_p.h
-    )
-
-    target_compile_definitions(Knx PRIVATE
-        OPENSSL_API_COMPAT=0x10100000L
-    )
-endif()
-
-if(QT_FEATURE_openssl_linked AND QT_FEATURE_opensslv11)
-    target_link_libraries(Knx PRIVATE
-        WrapOpenSSL::WrapOpenSSL
-    )
-endif()
-
-if(QT_FEATURE_opensslv11 AND NOT QT_FEATURE_openssl_linked)
-    target_link_libraries(Knx PRIVATE
-        WrapOpenSSLHeaders::WrapOpenSSLHeaders
-    )
-endif()
-
-if(QT_FEATURE_opensslv11 AND WIN32)
-    target_link_libraries(Knx PRIVATE
-        crypt32
-    )
-endif()
 
 qt_internal_add_docs(QtKnx doc/qtknx.qdocconf)
