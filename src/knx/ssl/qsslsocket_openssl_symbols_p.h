@@ -198,6 +198,20 @@ int q_EVP_CipherInit_ex(EVP_CIPHER_CTX *ctx, const EVP_CIPHER *cipher, ENGINE *i
 int q_EVP_CipherUpdate(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl,
                        const unsigned char *in, int inl);
 int q_EVP_CipherFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *outm, int *outl);
+void q_EVP_PKEY_free(EVP_PKEY *a);
+int q_EVP_PKEY_get_raw_private_key(const EVP_PKEY *pkey, unsigned char *priv, size_t *len);
+int q_EVP_PKEY_get_raw_public_key(const EVP_PKEY *pkey, unsigned char *pub, size_t *len);
+EVP_PKEY *q_EVP_PKEY_new_raw_private_key(int type, ENGINE *e, const unsigned char *key, size_t keylen);
+EVP_PKEY *q_EVP_PKEY_new_raw_public_key(int type, ENGINE *e, const unsigned char *key, size_t keylen);
+int q_EVP_PKEY_up_ref(EVP_PKEY *pkey);
+EVP_PKEY_CTX *q_EVP_PKEY_CTX_new_from_name(OSSL_LIB_CTX *libctx, const char *name, const char *propquery);
+EVP_PKEY_CTX *q_EVP_PKEY_CTX_new_from_pkey(OSSL_LIB_CTX *libctx, EVP_PKEY *pkey, const char *propquery);
+void q_EVP_PKEY_CTX_free(EVP_PKEY_CTX *ctx);
+int q_EVP_PKEY_keygen_init(EVP_PKEY_CTX *ctx);
+int q_EVP_PKEY_generate(EVP_PKEY_CTX *ctx, EVP_PKEY **ppkey);
+int q_EVP_PKEY_derive_init(EVP_PKEY_CTX *ctx);
+int q_EVP_PKEY_derive_set_peer(EVP_PKEY_CTX *ctx, EVP_PKEY *peer);
+int q_EVP_PKEY_derive(EVP_PKEY_CTX *ctx, unsigned char *key, size_t *keylen);
 
 #ifndef OPENSSL_NO_AES
 const EVP_CIPHER *q_EVP_aes_128_cbc();

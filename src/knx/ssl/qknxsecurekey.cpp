@@ -40,7 +40,7 @@ public:
     ~QKnxSecureKeyData()
     {
         if (m_evpPKey)
-            q_EVP_PKEY_free(m_evpPKey);
+            QKnxPrivate::q_EVP_PKEY_free(m_evpPKey);
     }
 
     bool isTypeValid() const
@@ -131,14 +131,14 @@ QKnxByteArray QKnxSecureKey::bytes() const
     if (d_ptr->m_type == Type::Private) {
         size_t len = 32;
         QKnxByteArray ba(int(len), 0);
-        if (q_EVP_PKEY_get_raw_private_key(d_ptr->m_evpPKey, ba.data(), &len) <= 0)
+        if (QKnxPrivate::q_EVP_PKEY_get_raw_private_key(d_ptr->m_evpPKey, ba.data(), &len) <= 0)
             return {};
         return ba;
     }
 
     size_t len = 32;
     QKnxByteArray pub(32, Qt::Uninitialized);
-    if (q_EVP_PKEY_get_raw_public_key(d_ptr->m_evpPKey, pub.data(), &len) > 0)
+    if (QKnxPrivate::q_EVP_PKEY_get_raw_public_key(d_ptr->m_evpPKey, pub.data(), &len) > 0)
         return pub;
     return {};
 }
@@ -173,14 +173,6 @@ QKnxSecureKey QKnxSecureKey::fromBytes(QKnxSecureKey::Type type, const QKnxByteA
             ba.constData(), ba.size());
         if (key.d_ptr->m_evpPKey)
             return key;
-
-        key.d_ptr->m_evpPKey = QKnxPrivate::q_EVP_PKEY_new();
-        if (QKnxPrivate::q_EVP_PKEY_set_type(key.d_ptr->m_evpPKey, NID_X25519) <= 0)
-            return {};
-
-        if (QKnxPrivate::q_EVP_PKEY_set1_tls_encodedpoint(key.d_ptr->m_evpPKey, ba.constData(), ba.size()) <= 0)
-            return {};
-        return key;
     }
 
     return {};
@@ -257,7 +249,7 @@ QKnxByteArray QKnxSecureKey::sharedSecret(const QKnxSecureKey &privateKey,
     if (peerPublicKey.type() != QKnxSecureKey::Type::Public || !peerPublicKey.isValid())
         return {};
 
-    auto evpPKeyCtx = QKnxPrivate::q_EVP_PKEY_CTX_new(privateKey.d_ptr->m_evpPKey, nullptr);
+    auto evpPKeyCtx = QKnxPrivate::q_EVP_PKEY_CTX_new_from_pkey(nullptr, privateKey.d_ptr->m_evpPKey, nullptr);
     if (!evpPKeyCtx)
         return {};
 
