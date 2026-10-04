@@ -1,6 +1,4 @@
-qt_add_executable(tst_qknxgroupaddressinfo WIN32
-    tst_qknxgroupaddressinfo.cpp
-)
+add_executable(tst_qknxgroupaddressinfo tst_qknxgroupaddressinfo.cpp)
 target_link_libraries(tst_qknxgroupaddressinfo PRIVATE
     Qt::Core
     Qt::Knx
@@ -21,15 +19,4 @@ qt_add_resources(tst_qknxgroupaddressinfo "project"
     FILES
         ${project_resource_files}
 )
-
-install(TARGETS tst_qknxgroupaddressinfo
-    BUNDLE DESTINATION .
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
-
-qt_generate_deploy_app_script(
-    TARGET tst_qknxgroupaddressinfo
-    FILENAME_VARIABLE deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-install(SCRIPT ${deploy_script})
+add_test(NAME tst_qknxgroupaddressinfo COMMAND tst_qknxgroupaddressinfo)

@@ -424,10 +424,14 @@ void tst_QKnxByteArray::lastIndexOf_data()
 
     QTest::newRow( "empty" ) << QKnxByteArray("", 0) << QKnxByteArray("x", 1) << -1 << -1;
     QTest::newRow( "null" ) << QKnxByteArray() << QKnxByteArray("x", 1) << -1 << -1;
-    QTest::newRow( "null-in-null") << QKnxByteArray() << QKnxByteArray() << -1 << 0;
-    QTest::newRow( "empty-in-null") << QKnxByteArray() << QKnxByteArray("", 0) << -1 << 0;
-    QTest::newRow( "null-in-empty") << QKnxByteArray("", 0) << QKnxByteArray() << -1 << 0;
-    QTest::newRow( "empty-in-empty") << QKnxByteArray("", 0) << QKnxByteArray("", 0) << -1 << 0;
+    QTest::newRow( "null-in-null-from-0") << QKnxByteArray() << QKnxByteArray() << 0 << 0;
+    QTest::newRow( "empty-in-null-from-0") << QKnxByteArray() << QKnxByteArray("", 0) << 0 << 0;
+    QTest::newRow( "null-in-empty-from-0") << QKnxByteArray("", 0) << QKnxByteArray() << 0 << 0;
+    QTest::newRow( "empty-in-empty-from-0") << QKnxByteArray("", 0) << QKnxByteArray("", 0) << 0 << 0;
+    QTest::newRow( "null-in-null-from-minus-1") << QKnxByteArray() << QKnxByteArray() << -1 << -1;
+    QTest::newRow( "empty-in-null-from-minus-1") << QKnxByteArray() << QKnxByteArray("", 0) << -1 << -1;
+    QTest::newRow( "null-in-empty-from-minus-1") << QKnxByteArray("", 0) << QKnxByteArray() << -1 << -1;
+    QTest::newRow( "empty-in-empty-from-minus-1") << QKnxByteArray("", 0) << QKnxByteArray("", 0) << -1 << -1;
 }
 
 void tst_QKnxByteArray::lastIndexOf()

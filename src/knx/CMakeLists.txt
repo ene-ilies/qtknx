@@ -9,10 +9,6 @@ find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Network)
 find_package(OpenSSL REQUIRED)
 
-message(STATUS "openssl: ${OPENSSL_CRYPTO_LIBRARY}")
-message(STATUS "OpenSSL version: ${OPENSSL_VERSION}")
-message(STATUS "OpenSSL libs: ${OPENSSL_LIBRARIES}")
-
 qt_internal_add_module(Knx
     SOURCES
         core/qknxbytearray.cpp core/qknxbytearray.h
@@ -83,7 +79,7 @@ qt_internal_add_module(Knx
         netip/qknxnetiphpai.cpp netip/qknxnetiphpai.h
         netip/qknxnetipknxaddressesdib.cpp netip/qknxnetipknxaddressesdib.h
         netip/qknxnetipmanufacturerdib.cpp netip/qknxnetipmanufacturerdib.h
-        netip/qknxnetiprouter.cpp netip/qknxnetiprouter.h netip/qknxnetiprouter_p.cpp
+        netip/qknxnetiprouter.cpp netip/qknxnetiprouter.h netip/qknxnetiprouter_p.h netip/qknxnetiprouter_p.cpp
         netip/qknxnetiproutingbusy.cpp netip/qknxnetiproutingbusy.h
         netip/qknxnetiproutingindication.cpp netip/qknxnetiproutingindication.h
         netip/qknxnetiproutinglostmessage.cpp netip/qknxnetiproutinglostmessage.h
@@ -181,6 +177,5 @@ target_link_libraries(Knx PRIVATE
 target_link_libraries(Knx PRIVATE
     OpenSSL::Crypto
 )
-
 
 qt_internal_add_docs(QtKnx doc/qtknx.qdocconf)

@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
-project(tests VERSION 1.0 LANGUAGES C CXX)
+project(tests VERSION 1.0 LANGUAGES CXX)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-find_package(QT NAMES Qt5 Qt6 REQUIRED COMPONENTS Core)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Gui Knx Network Test)
+find_package(Qt6 REQUIRED COMPONENTS Core Knx KnxPrivate Network Test)
 
 qt_standard_project_setup()
 
-
-if(NOT TARGET Qt::Test)
+if(NOT TARGET Qt6::Test)
     return()
 endif()
+
 add_subdirectory(auto)

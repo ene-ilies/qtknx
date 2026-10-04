@@ -1,6 +1,4 @@
-qt_add_executable(tst_qknxproject WIN32
-    tst_qknxproject.cpp
-)
+add_executable(tst_qknxproject tst_qknxproject.cpp)
 target_link_libraries(tst_qknxproject PRIVATE
     Qt::Core
     Qt::Knx
@@ -26,15 +24,4 @@ qt_add_resources(tst_qknxproject "project"
     FILES
         ${project_resource_files}
 )
-
-install(TARGETS tst_qknxproject
-    BUNDLE DESTINATION .
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
-
-qt_generate_deploy_app_script(
-    TARGET tst_qknxproject
-    FILENAME_VARIABLE deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-install(SCRIPT ${deploy_script})
+add_test(NAME tst_qknxproject COMMAND tst_qknxproject)
