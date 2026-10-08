@@ -28,7 +28,7 @@ qt_internal_add_module(Knx
         dpt/qknx8bitsignedvalue.cpp dpt/qknx8bitsignedvalue.h
         dpt/qknx8bitunsignedvalue.cpp dpt/qknx8bitunsignedvalue.h
         dpt/qknxchar.cpp dpt/qknxchar.h
-        dpt/qknxcharstring.cecurewpp dpt/qknxcharstring.h
+        dpt/qknxcharstring.cpp dpt/qknxcharstring.h
         dpt/qknxdatapointtype.cpp dpt/qknxdatapointtype.h dpt/qknxdatapointtype_p.h
         dpt/qknxdatapointtypefactory.cpp dpt/qknxdatapointtypefactory.h
         dpt/qknxdatetime.cpp dpt/qknxdatetime.h
