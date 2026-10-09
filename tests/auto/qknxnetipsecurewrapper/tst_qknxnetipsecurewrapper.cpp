@@ -63,15 +63,16 @@ private slots:
 void tst_qknxnetipsecurewrapper::testEncryptDecryptPayload_data()
 {
     QTest::addColumn<QKnxByteArray>("data");
-    QTest::addColumn<QString>("mac");
+    QTest::addColumn<QKnxByteArray>("mac");
 
     // Row 1: GroupValueWrite carrying switch On (DPT 1.001)
     QKnxSwitch switchDpt(QKnxSwitch::State::On);
-    QTest::newRow("switch") << switchDpt.bytes() << QKnxByteArray::fromHex("e380e57e3d93a8803f4467a9491388db");
+    QTest::newRow("switch") << switchDpt.bytes() << QKnxByteArray::fromHex("50c56f8a6df62fa53b0f675e903be3cc");
 
     // Row 2: GroupValueWrite carrying scaling at max (DPT 5.001 = 100% -> 0xFF)
+    // when sending QKnxScaling the length of the messages is exact multiple of 16 which is the size of the chiper block used.
     QKnxScaling scalingDpt(100.0);
-    QTest::newRow("scaling") << scalingDpt.bytes() << QKnxByteArray::fromHex("e380e57e3d93a8803f4467a9491388db");
+    QTest::newRow("scaling") << scalingDpt.bytes() << QKnxByteArray::fromHex("19b7135209c9e60cf6f4b3f790f0bf20");
 }
 
 void tst_qknxnetipsecurewrapper::testEncryptDecryptPayload()
@@ -129,6 +130,7 @@ void tst_qknxnetipsecurewrapper::testEncryptDecryptPayload()
         proxy.encapsulatedFrame(), sequenceNumber, serialNumber, messageTag);
     const auto decMac = QKnxCryptographicEngine::decryptMessageAuthenticationCode(sessionKey,
             proxy.messageAuthenticationCode(), sequenceNumber, serialNumber, messageTag);
+
     QCOMPARE(decryptedData, cemi.bytes());
     QCOMPARE(decMac, mac);
 }
