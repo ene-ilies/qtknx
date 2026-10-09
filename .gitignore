@@ -352,5 +352,3 @@ __pycache__/
 *.vcxproj.filters
 *_resource.rc
 *_wrapper.bat
-
-build/
