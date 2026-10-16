@@ -30,7 +30,7 @@
 #include <QtCore/qdatetime.h>
 #if defined(Q_OS_UNIX)
 #include <QtCore/qdir.h>
-#include <QtCore/qdirlisting.h>
+#include <QtCore/qdiriterator.h>
 #endif
 #include <QtCore/private/qduplicatetracker_p.h>
 #if defined(Q_OS_LINUX) && !defined(Q_OS_ANDROID)
@@ -228,11 +228,13 @@ static QStringList findAllLibs(QLatin1StringView filter)
     QStringList found;
     const QStringList filters((QString(filter)));
 
-    using F = QDirListing::IteratorFlag;
     for (const QString &path : paths) {
         QStringList entryList;
-        for (const auto &dirEntry : QDirListing(path, filters, F::FilesOnly))
-            entryList.emplace_back(dirEntry.fileName());
+        QDirIterator it(path, filters, QDir::Files);
+        while (it.hasNext()) {
+            it.next();
+            entryList.emplace_back(it.fileName());
+        }
 
         std::sort(entryList.begin(), entryList.end(), LibGreaterThan());
         for (const QString &entry : std::as_const(entryList))
