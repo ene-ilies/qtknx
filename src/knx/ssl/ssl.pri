@@ -10,8 +10,7 @@ SOURCES += ssl/qknxcryptographicengine.cpp \
 
 qtConfig(opensslv11) { # OpenSSL 1.1 support is required.
     SOURCES += ssl/qsslsocket_openssl_symbols.cpp
-    HEADERS += ssl/qsslsocket_openssl_symbols_p.h \
-               ssl/qsslsocket_openssl11_symbols_p.h
+    HEADERS += ssl/qsslsocket_openssl_symbols_p.h
 
     QMAKE_CXXFLAGS += -DOPENSSL_API_COMPAT=0x10100000L
 
