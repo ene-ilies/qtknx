@@ -268,7 +268,7 @@ void tst_QKnxByteArray::replace_data()
     QTest::newRow("4") << QKnxByteArray() << 0 << 0 << QKnxByteArray() << QKnxByteArray();
     // index out of range
     QTest::newRow("5") << QKnxByteArray() << 3 << 0 << QKnxByteArray::fromByteArray("hi")
-        << QKnxByteArray::fromByteArray("");
+        << QKnxByteArray::fromByteArray("   hi");
     // Optimized path
     QTest::newRow("6") << QKnxByteArray::fromByteArray("abcdef") << 3 << 12
         << QKnxByteArray::fromByteArray("abcdefghijkl")
