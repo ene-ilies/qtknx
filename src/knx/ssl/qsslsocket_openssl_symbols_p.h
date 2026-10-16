@@ -176,39 +176,13 @@ namespace QKnxPrivate {
 
 #endif // !defined QT_LINKED_OPENSSL
 
-<<<<<<< Updated upstream
-#if QT_CONFIG(opensslv11)
-#include "qsslsocket_openssl11_symbols_p.h"
-#else
-#include "qsslsocket_opensslpre11_symbols_p.h"
-#endif // QT_CONFIG
-
-=======
->>>>>>> Stashed changes
 bool q_resolveOpenSslSymbols();
 
-<<<<<<< Updated upstream
-#if QT_CONFIG(opensslv11)
-int q_BN_is_word(BIGNUM *a, BN_ULONG w);
-#else // opensslv11
-// BN_is_word is implemented purely as a
-// macro in OpenSSL < 1.1. It doesn't
-// call any functions.
-//
-// The implementation of BN_is_word is
-// 100% the same between 1.0.0, 1.0.1
-// and 1.0.2.
-//
-// Users are required to include <openssl/bn.h>.
-#define q_BN_is_word BN_is_word
-#endif // !opensslv11
-=======
 // Library version — used to validate the loaded OpenSSL version at runtime
 int q_OPENSSL_init_ssl(uint64_t opts, const OPENSSL_INIT_SETTINGS *settings);
 int q_OPENSSL_init_crypto(uint64_t opts, const OPENSSL_INIT_SETTINGS *settings);
 long q_OpenSSL_version_num();
 const char *q_OpenSSL_version(int type);
->>>>>>> Stashed changes
 
 // EVP cipher context — AES-128-CBC used for KNXnet/IP Secure session encryption
 EVP_CIPHER_CTX *q_EVP_CIPHER_CTX_new();
