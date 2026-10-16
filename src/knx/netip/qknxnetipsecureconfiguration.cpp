@@ -100,21 +100,13 @@ namespace QKnxPrivate
                 return {};
 
             if (!iaString.isEmpty()) { // only a single interface is requested
-<<<<<<< Updated upstream
-                for (const auto iface : qAsConst(keyring.Interface)) {
-=======
                 for (const auto &iface : std::as_const(keyring.Interface)) {
->>>>>>> Stashed changes
                     if (iaString != iface.IndividualAddress)
                         continue;
                     return { QKnxPrivate::fromInterface(iface, pwHash, createdHash) };
                 }
             } else {
-<<<<<<< Updated upstream
-                for (const auto iface : qAsConst(keyring.Interface))
-=======
                 for (const auto &iface : std::as_const(keyring.Interface))
->>>>>>> Stashed changes
                     results.append(QKnxPrivate::fromInterface(iface, pwHash, createdHash));
             }
         }
@@ -125,21 +117,13 @@ namespace QKnxPrivate
 
             const auto devices = keyring.Devices.value(0).Device;
             if (!iaString.isEmpty()) { // only a single device is requested
-<<<<<<< Updated upstream
-                for (const auto device : devices) {
-=======
                 for (const auto &device : std::as_const(devices)) {
->>>>>>> Stashed changes
                     if (iaString != device.IndividualAddress)
                         continue;
                     return { QKnxPrivate::fromDevice(device, pwHash, createdHash) };
                 }
             } else {
-<<<<<<< Updated upstream
-                for (const auto device : devices)
-=======
                 for (const auto &device : std::as_const(devices))
->>>>>>> Stashed changes
                     results.append(QKnxPrivate::fromDevice(device, pwHash, createdHash));
             }
         }
